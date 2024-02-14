@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <extension type="module" version="1.6" method="upgrade">
+    <name>Ephemeris for Joomla</name>
+    <version>3.0</version>
+    <creationDate>2013-08-04</creationDate>
+    <copyright>Copyright 2010, Saxum 2003 Bt.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3</license>
+	<author>Laszlo Szabo</author>
+	<authorEmail>szabo.laszlo@saxum2003.hu</authorEmail>
+	<authorUrl>http://saxum2003.hu</authorUrl>
+	<description>Ephemeris module for Joomla</description>
+    <files>
+		<filename module="mod_jephemeris" publish="true">mod_jephemeris.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>Astro_MoonPhase.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+    </files>
+	<media folder="images" destination="../images/jephemeris">
+		<filename>moon/first_quarter_moon_110x110.png</filename>
+		<filename>moon/first_quarter_moon_55x55.png</filename>
+		<filename>moon/full_moon_110x110.png</filename>
+		<filename>moon/full_moon_55x55.png</filename>
+		<filename>moon/new_moon_110x110.png</filename>
+		<filename>moon/new_moon_55x55.png</filename>
+		<filename>moon/third_quarter_moon_110x110.png</filename>
+		<filename>moon/third_quarter_moon_55x55.png</filename>
+		<filename>moon/waning_crescent_moon_110x110.png</filename>
+		<filename>moon/waning_crescent_moon_55x55.png</filename>
+		<filename>moon/waning_gibbous_moon_110x110.png</filename>
+		<filename>moon/waning_gibbous_moon_55x55.png</filename>
+		<filename>moon/waxing_crescent_moon_110x110.png</filename>
+		<filename>moon/waxing_crescent_moon_55x55.png</filename>
+		<filename>moon/waxing_gibbous_moon_110x110.png</filename>
+		<filename>moon/waxing_gibbous_moon_55x55.png</filename>
+		<filename>zodiac/aquarius_110x110.png</filename>
+		<filename>zodiac/aquarius_55x55.png</filename>
+		<filename>zodiac/aries_110x110.png</filename>
+		<filename>zodiac/aries_55x55.png</filename>
+		<filename>zodiac/cancer_110x110.png</filename>
+		<filename>zodiac/cancer_55x55.png</filename>
+		<filename>zodiac/capricorn_110x110.png</filename>
+		<filename>zodiac/capricorn_55x55.png</filename>
+		<filename>zodiac/gemini_110x110.png</filename>
+		<filename>zodiac/gemini_55x55.png</filename>
+		<filename>zodiac/leo_110x110.png</filename>
+		<filename>zodiac/leo_55x55.png</filename>
+		<filename>zodiac/libra_110x110.png</filename>
+		<filename>zodiac/libra_55x55.png</filename>
+		<filename>zodiac/pisces_110x110.png</filename>
+		<filename>zodiac/pisces_55x55.png</filename>
+		<filename>zodiac/sagittarius_110x110.png</filename>
+		<filename>zodiac/sagittarius_55x55.png</filename>
+		<filename>zodiac/scorpio_110x110.png</filename>
+		<filename>zodiac/scorpio_55x55.png</filename>
+		<filename>zodiac/taurus_110x110.png</filename>
+		<filename>zodiac/taurus_55x55.png</filename>
+		<filename>zodiac/virgo_110x110.png</filename>
+		<filename>zodiac/virgo_55x55.png</filename>
+	</media>
+    <languages>
+		<language tag="en-GB">en-GB.mod_jephemeris.ini</language>
+		<language tag="hu-HU">hu-HU.mod_jephemeris.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+		 <fieldset name="basic">
+			<field name="alignment" type="radio" default="0" label="MOD_JEPHEMERIS_ALIGNMENT" description="MOD_JEPHEMERIS_ALIGNMENT_DESC">
+	  			<option value="0">MOD_JEPHEMERIS_LEFT</option>
+	 			<option value="1">MOD_JEPHEMERIS_RIGHT</option>
+			</field>
+			<field name="sun_zodiac" type="radio" default="0" label="MOD_JEPHEMERIS_SUN_SIGN" description="MOD_JEPHEMERIS_SUNSIGN_DESC">
+	  			<option value="0">MOD_JEPHEMERIS_SMALL</option>
+	 			<option value="1">MOD_JEPHEMERIS_LARGE</option>
+	 			<option value="2">MOD_JEPHEMERIS_HIDE</option>
+			</field>
+			<field name="moon_zodiac" type="radio" default="0" label="MOD_JEPHEMERIS_MOON_SIGN" description="MOD_JEPHEMERIS_MOONSIGN_DESC">
+	  			<option value="0">MOD_JEPHEMERIS_SMALL</option>
+	 			<option value="1">MOD_JEPHEMERIS_LARGE</option>
+	 			<option value="2">MOD_JEPHEMERIS_HIDE</option>
+			</field>
+			<field name="moon_phase" type="radio" default="0" label="MOD_JEPHEMERIS_MOON_PHASE" description="MOD_JEPHEMERIS_MOONPHASE_DESC">
+	  			<option value="0">MOD_JEPHEMERIS_SMALL</option>
+	 			<option value="1">MOD_JEPHEMERIS_LARGE</option>
+	 			<option value="2">MOD_JEPHEMERIS_HIDE</option>
+			</field>
+		
+		 </fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="JEphemeris - Saxum Update Site">http://saxum2003.hu/updates/jephemeris-update.xml</server>
+	</updateservers>
+</extension>
